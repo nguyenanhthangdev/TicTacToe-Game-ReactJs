@@ -1,0 +1,25 @@
+.game-board {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 25px;
+}
+
+.game-cell {
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(216, 216, 216) 0px 8px 24px;
+}
+
+.game-cell.custom-x {
+    color: blue;
+}
+
+.game-cell.custom-o {
+    color: red;
+}
