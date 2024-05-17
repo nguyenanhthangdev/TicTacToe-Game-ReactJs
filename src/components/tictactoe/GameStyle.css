@@ -1,25 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+  display: inline-block;
+}
+
 .game-board {
-    margin: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 25px;
+  margin: 25px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+  background: linear-gradient(to right, rgb(191, 0, 175), rgb(60, 21, 255));
+  padding: 10px;
 }
 
 .game-cell {
-    cursor: pointer;
-    font-size: 60px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgb(216, 216, 216) 0px 8px 24px;
+  cursor: pointer;
+  font-size: 100px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(65, 65, 65);
+  opacity: 0.9;
+  border-radius: 10px;
 }
 
 .game-cell.custom-x {
-    color: blue;
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 4px 10px rgb(60, 21, 255), -4px -4px 10px rgb(60, 21, 255),
+    4px -4px 10px rgb(60, 21, 255), -4px 4px 10px rgb(60, 21, 255);
 }
 
 .game-cell.custom-o {
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 4px 10px rgb(191, 0, 175), -4px -4px 10px rgb(191, 0, 175),
+    4px -4px 10px rgb(191, 0, 175), -4px 4px 10px rgb(191, 0, 175);
+}
+
+.game-cell span {
+    margin-top: -12px;
+}
+
+.custom-button {
+  margin: 10px 0px;
+  background: linear-gradient(to right, rgb(191, 0, 175), rgb(60, 21, 255));
+  padding: 8px 12px;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+.game-winner {
+    font-size: 17px;
+    font-weight: bold;
     color: red;
 }
